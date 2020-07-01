@@ -27,12 +27,13 @@ function setup() {
 function draw() {
   Engine.update(engine);
   if(gameState === "start"){
-  text("This is small game that will teach you the importance of throwing away your trash. Press Up Arrow to Start, and Up to throw away the trash.", 50,350)
+  text("This is small game that will teach you the importance of throwing away your trash. Press Up Arrow to Start, and Drag to throw away the trash.", 50,350)
   if(keyCode === UP_ARROW){
   gameState = "play"
   }
   }
   if(gameState === "play"){
+	  Engine.update(engine);
   rectMode(CENTER);
   background("white");
   createEdgeSprites();
